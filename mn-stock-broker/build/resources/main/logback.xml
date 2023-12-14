@@ -9,6 +9,8 @@
         </encoder>
     </appender>
 
+    <logger name="kr.co.bigzero.udemy" level="DEBUG" />
+
     <root level="info">
         <appender-ref ref="STDOUT"/>
     </root>
