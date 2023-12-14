@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for mn-quickstart" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="micronaut.processing.group" value="kr.co.bigzero.udemy" />
+        <option name="micronaut.processing.module" value="mn-quickstart" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-inject-java/3.10.1/micronaut-inject-java-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-inject/3.10.1/micronaut-inject-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-core/3.10.1/micronaut-core-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-aop/3.10.1/micronaut-aop-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-validation/3.10.1/micronaut-validation-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-core-reactive/3.10.1/micronaut-core-reactive-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar" />
+          <entry name="$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.5.0/reactor-core-3.5.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-http-validation/3.10.1/micronaut-http-validation-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-http-server/3.10.1/micronaut-http-server-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-websocket/3.10.1/micronaut-websocket-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-http/3.10.1/micronaut-http-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-http-client-core/3.10.1/micronaut-http-client-core-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-runtime/3.10.1/micronaut-runtime-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-context/3.10.1/micronaut-context-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-jackson-databind/3.10.1/micronaut-jackson-databind-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-jackson-core/3.10.1/micronaut-jackson-core-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-json-core/3.10.1/micronaut-json-core-3.10.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.15.0/jackson-core-2.15.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.15.0/jackson-annotations-2.15.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.15.0/jackson-databind-2.15.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.0/jackson-datatype-jdk8-2.15.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.0/jackson-datatype-jsr310-2.15.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-router/3.10.1/micronaut-router-3.10.1.jar" />
+        </processorPath>
+        <module name="mn-quickstart" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mn-quickstart" options="-parameters -Amicronaut.processing.group=kr.co.bigzero.udemy -Amicronaut.processing.module=mn-quickstart" />
+    </option>
+  </component>
+</project>
