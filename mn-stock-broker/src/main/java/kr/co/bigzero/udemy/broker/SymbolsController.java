@@ -1,6 +1,8 @@
 package kr.co.bigzero.udemy.broker;
 
 import io.micronaut.http.annotation.Controller;
+import io.micronaut.http.annotation.Get;
+import kr.co.bigzero.udemy.broker.data.InMemoryStore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,14 @@ import java.util.List;
 @Controller("/symbols")
 public class SymbolsController {
 
+  private final InMemoryStore inMemoryStore;
+
+  public SymbolsController(InMemoryStore inMemoryStore) {
+    this.inMemoryStore = inMemoryStore;
+  }
+
+  @Get
   public List<Symbol> getAll() {
-    return new ArrayList<>();
+    return new ArrayList<>(inMemoryStore.getSymbols().values());
   }
 }
