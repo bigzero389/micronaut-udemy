@@ -1,1 +1,4 @@
-GET localhost:8080/symbols
+#GET localhost:8080/symbols
+#GET localhost:8080/symbols/filter?max=5
+#GET localhost:8080/symbols/filter?max=5&offset=1
+GET localhost:8080/symbols/filter?offset=1
