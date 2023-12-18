@@ -9,8 +9,9 @@ import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
-import kr.co.bigzero.udemy.broker.Symbol;
+import kr.co.bigzero.udemy.broker.symbol.Symbol;
 import kr.co.bigzero.udemy.broker.data.InMemoryAccountStore;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -43,7 +44,7 @@ public class WatchListControllerTest {
   void returnsEmptyWatchListForTestAccount() {
     final WatchList result = client.toBlocking().retrieve(GET("/"), WatchList.class);
     assertNull(result.symbols());
-    assertTrue(inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols().isEmpty());
+    Assertions.assertTrue(inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols().isEmpty());
   }
 
   @Test
@@ -71,17 +72,17 @@ public class WatchListControllerTest {
         .accept(MediaType.APPLICATION_JSON);
     final HttpResponse<Object> added = client.toBlocking().exchange(request);
     assertEquals(HttpStatus.OK, added.getStatus());
-    assertEquals(symbols, inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols());
+    Assertions.assertEquals(symbols, inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols());
   }
 
   @Test
   void canDeleteWatchListForTestAccount() {
     givenWatchListForAccountExist();
-    assertFalse(inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols().isEmpty());
+    Assertions.assertFalse(inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols().isEmpty());
 
     var deleted = client.toBlocking().exchange(HttpRequest.DELETE("/"));
     assertEquals(HttpStatus.NO_CONTENT, deleted.getStatus());
-    assertTrue(inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols().isEmpty());
+    Assertions.assertTrue(inMemoryAccountStore.getWatchList(TEST_ACCOUNT_ID).symbols().isEmpty());
   }
 
   private void givenWatchListForAccountExist() {

@@ -1,4 +1,4 @@
-package kr.co.bigzero.udemy.broker;
+package kr.co.bigzero.udemy.broker.symbol;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import io.micronaut.http.HttpStatus;
@@ -6,7 +6,7 @@ import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
-import kr.co.bigzero.udemy.broker.data.InMemoryStore;
+import kr.co.bigzero.udemy.broker.data.InMemorySymbolStore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -25,11 +25,11 @@ public class SymbolsControllerTest {
   HttpClient client;
 
   @Inject
-  InMemoryStore inMemoryStore;
+  InMemorySymbolStore inMemorySymbolStore;
 
   @BeforeEach
   void setup() {
-    inMemoryStore.initializeWith(10);
+    inMemorySymbolStore.initializeWith(10);
   }
 
   @Test
@@ -42,7 +42,7 @@ public class SymbolsControllerTest {
   @Test
   void symbolsEndpointReturnsTheCorrectSymbol() {
     var testSymbol = new Symbol("TEST");
-    inMemoryStore.getSymbols().put(testSymbol.value(), testSymbol);
+    inMemorySymbolStore.getSymbols().put(testSymbol.value(), testSymbol);
     var response = client.toBlocking().exchange("/" + testSymbol.value(), Symbol.class);
     assertEquals(HttpStatus.OK, response.getStatus());
     assertEquals(testSymbol, response.getBody().get());
