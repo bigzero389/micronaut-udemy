@@ -1,4 +1,4 @@
-package kr.co.bigzero.udemy;
+package kr.co.bigzero.udemy.broker;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import io.micronaut.http.HttpStatus;
@@ -6,7 +6,6 @@ import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
-import kr.co.bigzero.udemy.broker.Symbol;
 import kr.co.bigzero.udemy.broker.data.InMemoryStore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @MicronautTest
 public class SymbolsControllerTest {
 
-  private final Logger LOG = LoggerFactory.getLogger(SymbolsControllerTest.class);
+  private static final Logger LOG = LoggerFactory.getLogger(SymbolsControllerTest.class);
 
   @Inject
   @Client("/symbols")
