@@ -90,6 +90,9 @@ public class WatchListControllerTest {
         Stream.of("AAPL", "GOOGL", "MSFT")
             .map(Symbol::new)
             .toList()
+//        Stream.of("AAPL", "GOOGL", "MSFT")
+//            .map(s -> new Symbol(s))    // 람다를 메서드 참조를 변환하면 더 코드를 간결하게 할 수 있다.
+//            .toList()
     ));
   }
 }
