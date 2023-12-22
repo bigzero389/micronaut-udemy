@@ -19,6 +19,17 @@ dependencies {
         exclude group: 'org.yaml', module: 'snakeyaml'
     }
     runtimeOnly("ch.qos.logback:logback-classic")
+    // https://mvnrepository.com/artifact/io.micronaut.security/micronaut-security-jwt
+    implementation("io.micronaut.security:micronaut-security-jwt:3.11.1")
+    // https://mvnrepository.com/artifact/io.micronaut.security/micronaut-security-annotations
+    implementation("io.micronaut.security:micronaut-security-annotations:3.11.1")
+    // https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
+    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+// https://mvnrepository.com/artifact/io.projectreactor/reactor-core
+    implementation("io.projectreactor:reactor-core:3.6.1")
+
+
+
 }
 
 

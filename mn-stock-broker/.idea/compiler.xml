@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <option name="micronaut.processing.annotations" value="kr.co.bigzero.udemy.*" />
@@ -9,6 +10,7 @@
         <option name="micronaut.processing.incremental" value="true" />
         <option name="micronaut.processing.module" value="mn-stock-broker" />
         <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.security/micronaut-security-annotations/3.11.1/6ffba116736cd02ccd2c82241962cf1b7a092f55/micronaut-security-annotations-3.11.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-graal/3.10.1/4ea1681f13b099a83a5768dceddca19ac93241ae/micronaut-graal-3.10.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-http-validation/3.10.1/f21812d9fc374c19a4e280b6daeb8c606b1664e2/micronaut-http-validation-3.10.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/3.10.1/899a0117cea1ae89d9b7c24b5cf8b0f447f06065/micronaut-inject-java-3.10.1.jar" />
@@ -51,6 +53,7 @@
         <option name="micronaut.processing.incremental" value="true" />
         <option name="micronaut.processing.module" value="mn-stock-broker" />
         <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.security/micronaut-security-annotations/3.11.1/6ffba116736cd02ccd2c82241962cf1b7a092f55/micronaut-security-annotations-3.11.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-graal/3.10.1/4ea1681f13b099a83a5768dceddca19ac93241ae/micronaut-graal-3.10.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/3.10.1/899a0117cea1ae89d9b7c24b5cf8b0f447f06065/micronaut-inject-java-3.10.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-validation/3.10.1/b1a996da17b724e41ffad85b23666832c076ff4b/micronaut-validation-3.10.1.jar" />

@@ -1,6 +1,30 @@
 micronaut:
   application:
     name: mnStockBroker
+  server:
+    port: 8080
+  security:
+    endpoints:
+      login:
+        enabled: true
+    authentication: bearer
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: changeThisSecret  # secret manager needed
+hello:
+  controller:
+    path: "/hello"
+  service:
+    greeting: "Hello from Service"
+  world:
+    message: "Hello from application.yaml"
+    translation:
+      en: "Hello World"
+      kr: "안녕하세요"
+      de: ""
 netty:
   default:
     allocator:
